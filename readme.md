@@ -53,7 +53,7 @@ This is a project developed during the first Bootcamp Ignite ** Chapter, present
 
 You can view the project template through the links below:
 
-- [Application Template](https://github.com/rocketseat-education/ignite-template-reactjs-conceitos-do-react)
+- [Application Template](https://github.com/rocketseat-education/ignite-template-componentizando-a-aplicacao)
 
 ## 📝 License
 
