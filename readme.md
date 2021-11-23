@@ -24,15 +24,15 @@ This project was developed using the following technologies:
 
 ## 🚀 Getting started
 
-Clone the project and access the folder
-
-```bash
-$ git clone https://github.com/YuriFarnesio/WhatchMe.git && cd WhatchMe
-```
-
 Follow the steps below
 
 ```bash
+# Clone the project
+git clone https://github.com/YuriFarnesio/WhatchMe.git
+
+# Access the folder
+cd WhatchMe
+
 # Install the dependencies
 $ yarn
 
@@ -45,7 +45,7 @@ $ yarn dev
 
 ## 💻 Project
 
-Extra project of the first chapter of Ignite, where we componentize an already functional application.
+Extra project of the first chapter of Ignite, where I refactor a page to list the movies according to genre.
 
 This is a project developed during the first Bootcamp Ignite ** Chapter, presented by ** [@Rocketseat](https://github.com/Rocketseat) \*\*.
 
@@ -58,3 +58,6 @@ You can view the project template through the links below:
 ## 📝 License
 
 This project is licensed under the MIT License.
+
+<hr />
+<p>by Yur Farnesio :wave: <a href="https://linktr.ee/YuriFarnesio">Get in touch!</a></p>
