@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img alt="to.do" src="https://user-images.githubusercontent.com/45167583/141979416-5c79546a-d329-46af-b85d-b66eb0d91442.png" width="120px">
+  <img alt="WhatchMe" src="https://user-images.githubusercontent.com/45167583/141979416-5c79546a-d329-46af-b85d-b66eb0d91442.png" width="120px">
 </p>
 
 ## 🧪 Technologies
@@ -60,4 +60,4 @@ You can view the project template through the links below:
 This project is licensed under the MIT License.
 
 <hr />
-<p>by Yur Farnesio :wave: <a href="https://linktr.ee/YuriFarnesio">Get in touch!</a></p>
+<p>by Yuri Farnesio :wave: <a href="https://linktr.ee/YuriFarnesio">Get in touch!</a></p>
