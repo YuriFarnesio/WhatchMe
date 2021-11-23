@@ -27,7 +27,7 @@ This project was developed using the following technologies:
 Clone the project and access the folder
 
 ```bash
-$ git clone https://github.com/YuriFarnesio/ignite-challenge-componentizando-a-aplicacao.git && cd ignite-challenge-componentizando-a-aplicacao
+$ git clone https://github.com/YuriFarnesio/WhatchMe.git && cd WhatchMe
 ```
 
 Follow the steps below
