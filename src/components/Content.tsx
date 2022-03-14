@@ -1,52 +1,23 @@
-import { useEffect, useState } from "react";
+import { useContext, useMemo } from "react";
 
-import { api } from "../services/api";
-
+import { GlobalContext } from "../context/GlobalContext";
 import { MovieCard } from "./MovieCard";
 
 import '../styles/content.scss';
 
-interface ContentProps {
-  selected: number;
-}
+export function Content() {
+  const { selectedGenre, moviesByGenre } = useContext(GlobalContext);
 
-interface Genre {
-  title: string;
-}
+  const movies = useMemo(() => {
+    return moviesByGenre.map((movie) => {
+      const hours = Math.trunc(parseInt(movie.Runtime.replace(' min', '')) / 60);
+      const minutes = parseInt(movie.Runtime.replace(' min', '')) % 60;
 
-interface Movie {
-  imdbID: string;
-  Title: string;
-  Poster: string;
-  Ratings: Array<{
-    Value: string;
-  }>;
-  Runtime: string;
-}
+      movie.Runtime = `${hours < 10 ? `0${hours}` : hours}H ${minutes < 10 ? `0${minutes}` : minutes}m`;
 
-export function Content({ selected }: ContentProps) {
-  const [movies, setMovies] = useState<Movie[]>([]);
-
-  const [selectedGenre, setSelectedGenre] = useState<Genre>({} as Genre);
-
-  useEffect(() => {
-    api.get<Movie[]>(`movies/?Genre_id=${selected}`).then(response => {
-      setMovies(
-        response.data.map((movie) => {
-          const hours = Math.trunc(parseInt(movie.Runtime.replace(' min', '')) / 60);
-          const minutes = parseInt(movie.Runtime.replace(' min', '')) % 60;
-
-          movie.Runtime = `${hours < 10 ? `0${hours}` : hours}h${minutes < 10 ? `0${minutes}` : minutes}m`;
-
-          return movie;
-        })
-      );
+      return movie;
     });
-
-    api.get<Genre>(`genres/${selected}`).then(response => {
-      setSelectedGenre(response.data);
-    })
-  }, [selected]);
+  }, [moviesByGenre])
 
   return (
     <div className="container">

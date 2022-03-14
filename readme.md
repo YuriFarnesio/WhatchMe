@@ -45,9 +45,9 @@ $ yarn dev
 
 ## 💻 Project
 
-Extra project of the first chapter of Ignite, where I refactor a page to list the movies according to genre.
+Extra project of the first and fifth chapters of Ignite, where I refactor a page to list the movies according to genre.
 
-This is a project developed during the first Bootcamp Ignite ** Chapter, presented by ** [@Rocketseat](https://github.com/Rocketseat) \*\*.
+This is a project developed during the first and fifth chapter of Bootcamp Ignite, presented by \*\* [@Rocketseat](https://github.com/Rocketseat) \*\*.
 
 ## 🔖 Template
 

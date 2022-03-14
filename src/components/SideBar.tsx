@@ -1,29 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useContext } from 'react';
 
-import { api } from '../services/api';
-
+import { GlobalContext } from '../context/GlobalContext';
 import { Button } from './Button';
 
 import '../styles/sidebar.scss';
 
-interface SideBarProps {
-  handleClickButton(id: number): void;
-  selectedGenreId: number;
-}
-interface Genre {
-  id: number;
-  name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
-  title: string;
-}
+export function SideBar() {
+  const { genres, selectedGenreId, setSelectedGenreId } = useContext(GlobalContext);
 
-export function SideBar({ handleClickButton, selectedGenreId }: SideBarProps) {
-  const [genres, setGenres] = useState<Genre[]>([]);
-
-  useEffect(() => {
-    api.get<Genre[]>('genres').then(response => {
-      setGenres(response.data);
-    });
-  }, []);
+  const handleClickButton = useCallback((id) => setSelectedGenreId(id), []);
 
   return (
     <nav className="sidebar">
